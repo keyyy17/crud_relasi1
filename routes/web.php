@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\pinjamController;
+use App\Http\Controllers\PinjamController;
+use App\Http\Controllers\JenisController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource("/pinjam", pinjamController::class); 
+Route::resource("/pinjam", PinjamController::class); 
+Route::resource("/jenis", JenisController::class); 

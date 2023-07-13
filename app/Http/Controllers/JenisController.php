@@ -3,18 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Pinjam;//add Pinjam Model - Data is coming from the database via Model.
-use App\Models\Jenis;
+use App\Models\Jenis;//add  Model - Data is coming from the database via Model.
 
-class PinjamController extends Controller
+class JenisController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $pinjam = Pinjam::all();
-        return view ('pinjam.index')->with('pinjam',$pinjam);
+        $jenis = Jenis::all();
+        return view ('jenis.index')->with('jenis',$jenis);
     }
 
     /**
@@ -23,7 +22,7 @@ class PinjamController extends Controller
     public function create()
     {
         $jenis = Jenis::all();
-        return view('pinjam.create',compact('jenis'));
+        return view('jenis.create');
     }
 
     /**
@@ -35,9 +34,9 @@ class PinjamController extends Controller
     public function store(Request $request)
     {
         $input =$request->all();
-        Pinjam::create($input);
+        Jenis::create($input);
 
-        return redirect('pinjam')->with('flash_message', 'Pinjam Addedd');
+        return redirect('jenis')->with('flash_message', 'Jenis Addedd');
     }
 
     /**
@@ -45,8 +44,8 @@ class PinjamController extends Controller
      */
     public function show(string $id)
     {
-        $pinjam = Pinjam::find($id);
-        return view('pinjam.show')->with('pinjam', $pinjam);
+        $jenis = Jenis::find($id);
+        return view('jenis.show')->with('jenis', $jenis);
     }
 
     /**
@@ -57,10 +56,8 @@ class PinjamController extends Controller
      */
     public function edit(string $id)
     {
-        $pinjam = pinjam::find($id);
-        $jenis = Jenis::all();
-        return view('pinjam.edit',compact('jenis','pinjam'));
-
+        $jenis = Jenis::find($id);
+        return view('jenis.edit')->with('jenis', $jenis);
     }
 
     /**
@@ -72,11 +69,10 @@ class PinjamController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $pinjam = Pinjam::find($id);
         $jenis = Jenis::find($id);
         $input =$request->all();
-        $pinjam->update($input);
-        return redirect('pinjam')->with('flash_message', 'pinjam Updated!');
+        $jenis->update($input);
+        return redirect('jenis')->with('flash_message', 'jenis Updated!');
     }
 
     /**
@@ -87,7 +83,7 @@ class PinjamController extends Controller
      */
     public function destroy(string $id)
     {
-        Pinjam::destroy($id);
-        return redirect('pinjam')->with('flash_message', 'pinjam deleted!');
+        Jenis::destroy($id);
+        return redirect('jenis')->with('flash_message', 'jenis deleted!');
     }
 }

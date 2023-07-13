@@ -11,4 +11,10 @@ class Pinjam extends Model
     protected $table ='pinjam';
     protected $primaryKey ='id';
     protected $fillable = ['nama','jenis_buku','jumlah_buku','tanggal_pinjam'];
+
+    public function JEnis()
+    {
+        return $this->belongsTo(Jenis::class, 'jenis_buku' ,'id');
+    }
 }
+

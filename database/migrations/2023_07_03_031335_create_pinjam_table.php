@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->string('jenis_buku');
-            $table->string('jumlah buku');
+            $table->string('jumlah_buku');
             $table->string('tanggal_pinjam');
             $table->timestamps();
     

@@ -15,11 +15,17 @@
         <label>Nama</label><br>
         <input type="text" name="nama" id="nama" class="form-control"><br>
 
-        <label>Jenis Buku</label>
-        <input type="text" name="jenis_buku" id="jenis_buku" class="form-control"><br>
+        <div class="form-group">
+            <label>Jenis Buku</label>
+            <select name="jenis_buku" id="jenis_buku" class="form-control">
+                @foreach ($jenis as $item)
+                <option value="{{$item->id}}"> {{ $item->jenis}}</option>
+                @endforeach
+            </select>
 
+        </div>
         <label>Jumlah buku</label>
-        <input type="text" name="jumlah_buku" id="jumlah_buku" class="form-control"><br>
+        <input type="number" name="jumlah_buku" id="jumlah_buku" class="form-control"><br>
 
         <label>Tanggal Pinjam</label>
         <input type="date" name="tanggal_pinjam" id="tanggal_pinjam" class="form-control"><br>
