@@ -32,7 +32,7 @@
                         <tbody>
                             @foreach($jenis as $item)
                             <tr>
-                                <td>{{ $item->jenis }}</td>
+                                <td>{{ $item->jenis_buku }}</td>
                                 <td>
                                     <a href="{{url('/jenis/' .$item->id)}}" title="View"><button class="btn btn-info btn-sm "><i aria-hidden="true"></i><i>View</i></button></a>
                                     <a href="{{url('/jenis/' .$item->id . '/edit/')}}" title="Edit"><button class="btn btn-primary btn-sm"><i aria-hidden="true"></i><i>Edit</i></button></a>

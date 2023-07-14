@@ -14,10 +14,11 @@ return new class extends Migration
         Schema::create('pinjam', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('jenis_buku');
+            $table->foreignId('jenis_buku');
             $table->string('jumlah_buku');
             $table->string('tanggal_pinjam');
-            $table->timestamps();
+            $table->foreign('jenis_buku')->references('id')->on('jenis');
+            $table->timestamps();   
     
         });
     }

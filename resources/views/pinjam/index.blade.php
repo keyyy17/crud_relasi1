@@ -37,7 +37,7 @@
                             @foreach($pinjam as $item)
                             <tr>
                                 <td>{{ $item->nama }}</td>
-                                <td>{{ $item->JEnis?->jenis }}</td>
+                                <td>{{ $item->JEnis?->jenis_buku }}</td>
                                 <td>{{ $item->jumlah_buku}}</td>
                                 <td>{{ $item->tanggal_pinjam}}</td>
                                 <td>

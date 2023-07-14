@@ -57,7 +57,7 @@ class JenisController extends Controller
     public function edit(string $id)
     {
         $jenis = Jenis::find($id);
-        return view('jenis.edit')->with('jenis', $jenis);
+        return view('jenis_buku.edit')->with('jenis', $jenis);
     }
 
     /**

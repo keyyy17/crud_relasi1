@@ -11,7 +11,7 @@ class Jenis extends Model
     
     protected $table ='jenis';
     protected $primaryKey ='id';
-    protected $fillable=['jenis'];
+    protected $fillable=['jenis_buku'];
 
     public function pinjam()
     {

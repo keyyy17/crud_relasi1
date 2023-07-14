@@ -16,7 +16,7 @@ Jenis
     @method("PATCH")
     <input type="hidden" name="id" id="id" value="{{ $jenis->id }}" class="form-control">
     <label>MASUKAN JENIS BUKU</label><br>
-    <input type="select" name="jenis" id="jenis" value="{{ $jenis->jenis }}" class="form-control"><br>
+    <input type="select" name="jenis_buku" id="jenis_buku" value="{{ $jenis->jenis_buku }}" class="form-control"><br>
     <input type="submit" value="Update" class="btn btn-success">   
 </form> 
 </div>

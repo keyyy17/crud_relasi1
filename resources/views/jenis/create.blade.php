@@ -13,7 +13,7 @@
     <form action="{{ route('jenis.store') }}" method="post">
         {!! csrf_field() !!}
         <label>Jenis Buku</label><br>
-        <input type="select" name="jenis" id="jenis" class="form-control"><br>
+        <input type="select" name="jenis_buku" id="jenis_buku" class="form-control"><br>
         <input type="submit" value="Save" class="btn btn-success"><br>
     </form>
 </div>
